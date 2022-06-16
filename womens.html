@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: end;
+      }
+      #sidebar {
+        border: 1px solid;
+        width: 20%;
+      }
+      #container {
+        width: 80%;
+        padding: 10px 10px 10px 10px;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      #container > div {
+        height: 300px;
+
+        align-content: center;
+        text-align: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      #container > div > div {
+        width: 100%;
+        height: 70%;
+      }
+      #container > div > div > img {
+        max-width: 100%;
+        height: 100%;
+      }
+      #container > div > p {
+        white-space: nowrap;
+        width: 230px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-left: 10px;
+      }
+    </style>
+    <script src="data.js"></script>
+  </head>
+  <body>
+    <div id="sidebar">
+      <input type="checkbox" value="Top Wear" id="one">Top Wear</input><br>
+      <input type="checkbox" value="Bottom Wear" id="two">Bottom Wear</input><br>
+      <input type="checkbox" value="Foot Wear" id="three">Foot Wear</input><br>
+      <input type="range" id="slider">
+    </div>
+    <div id="container"></div>
+  </body>
+</html>
+<script>
+    let range=document.getElementById("slider").value
+console.log(range)
+   let Sdata= Data.filter(function(el){
+        if(el.category==="Women's fashion"){
+            return el
+        }
+    })
+
+    printLM(Sdata);
+    document.querySelector("#one").addEventListener("click", myfunction);
+    document.querySelector("#two").addEventListener("click", myfunction);
+    document.querySelector("#three").addEventListener("click", myfunction);
+    
+
+    function myfunction() {
+        
+      let ev=event.target
+      let filteredarr = [];
+      let x = ev.value;
+      Sdata.forEach(function (el) {
+          if (el.type === x) {
+            console.log(el);
+          filteredarr.push(el);
+        }
+      });
+      document.getElementById("one").click(2)
+      document.getElementById("two").click(2)
+      document.getElementById("three").click(2)
+      ev.click(3)
+
+      document.getElementById("container").innerHTML = "";
+      printLM(filteredarr);
+    }
+
+    function printLM(Sdata) {
+      for (let i = 0; i < Sdata.length; i++) {
+        let div = document.createElement("div");
+
+        let imgdiv = document.createElement("div");
+
+        let img = document.createElement("img");
+        img.src = Sdata[i].url;
+        let p = document.createElement("p");
+        p.textContent = Sdata[i].name;
+
+        let h3 = document.createElement("h3");
+        h3.textContent = "₹" + Sdata[i].price;
+
+        imgdiv.append(img);
+        div.append(imgdiv, p, h3);
+        document.querySelector("#container").append(div);
+      }
+    }
+</script>
