@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare & personal care</title>
+    <style>
+    body{
+        display: flex;
+        justify-content: end;
+    }
+    #sidebar{
+        border: 1px solid;
+        width: 20%;
+    }
+    #container{
+        width: 80%;
+        padding: 10px 10px 10px 10px ;
+        
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    #container>div{
+        
+        height:300px;
+       
+       align-content: center;
+       text-align: center;
+       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    }
+    #container>div>div{
+        width: 100%;
+        height: 70%;
+       
+    }
+    #container>div>div>img{
+     max-width: 100%;
+     height: 100%;
+       
+    }
+    #container>div>p{
+        white-space: nowrap; 
+        width: 230px; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        margin-left: 10px;
+      
+    }
+</style>
+</head>
+<body>
+    <div id="sidebar">
+        <select name="" id="category">
+            <option value="Day Joy">Day Joy</option>
+            <option value="Face Mask">Face Mask</option>
+            <option value="Oxi19">Oxi 19</option>
+            <option value="bmbysc">Bombay shaving company</option>
+        </select>
+    </div>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+<script>
+    
+    let Data=[
+    {
+            category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/81UV5oidWoL._SL1500_-400x400.jpg",
+            name:"Day Joy Asthprash Improves Lung Function...",
+            price:"1599",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+            img3:"https://www.uboric.com/wp-content/uploads/2020/09/Buckthorn-400x472.png",
+            img4:"https://www.uboric.com/wp-content/uploads/2020/09/seabuckthorn.jpg"
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+            name:"Day Joy Rich Berry Juice",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/Buckthorn.png",
+            name:"Day Joy SEABUCK THRON JUICE",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/10/Adicardial-400x775.jpg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/GAS5001-400x566.jpeg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/ccc502e7-5390-4fc2-b3af-ee6c5a2a8a3b-400x494.jpg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/download-31.png-co-400x377.png",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/photo_2020-09-24_12-43-08-400x300.jpg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {
+            category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/81UV5oidWoL._SL1500_-400x400.jpg",
+            name:"Day Joy Asthprash Improves Lung Function...",
+            price:"1599",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+            img3:"https://www.uboric.com/wp-content/uploads/2020/09/Buckthorn-400x472.png",
+            img4:"https://www.uboric.com/wp-content/uploads/2020/09/seabuckthorn.jpg"
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+            name:"Day Joy Rich Berry Juice",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/Buckthorn.png",
+            name:"Day Joy SEABUCK THRON JUICE",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/10/Adicardial-400x775.jpg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/GAS5001-400x566.jpeg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/ccc502e7-5390-4fc2-b3af-ee6c5a2a8a3b-400x494.jpg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/download-31.png-co-400x377.png",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/photo_2020-09-24_12-43-08-400x300.jpg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {
+            category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/81UV5oidWoL._SL1500_-400x400.jpg",
+            name:"Day Joy Asthprash Improves Lung Function...",
+            price:"1599",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+            img3:"https://www.uboric.com/wp-content/uploads/2020/09/Buckthorn-400x472.png",
+            img4:"https://www.uboric.com/wp-content/uploads/2020/09/seabuckthorn.jpg"
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+            name:"Day Joy Rich Berry Juice",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/Buckthorn.png",
+            name:"Day Joy SEABUCK THRON JUICE",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/10/Adicardial-400x775.jpg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/GAS5001-400x566.jpeg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/ccc502e7-5390-4fc2-b3af-ee6c5a2a8a3b-400x494.jpg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/download-31.png-co-400x377.png",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/photo_2020-09-24_12-43-08-400x300.jpg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {
+            category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/81UV5oidWoL._SL1500_-400x400.jpg",
+            name:"Day Joy Asthprash Improves Lung Function...",
+            price:"1599",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+            img3:"https://www.uboric.com/wp-content/uploads/2020/09/Buckthorn-400x472.png",
+            img4:"https://www.uboric.com/wp-content/uploads/2020/09/seabuckthorn.jpg"
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+            name:"Day Joy Rich Berry Juice",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/Buckthorn.png",
+            name:"Day Joy SEABUCK THRON JUICE",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/10/Adicardial-400x775.jpg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/GAS5001-400x566.jpeg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/ccc502e7-5390-4fc2-b3af-ee6c5a2a8a3b-400x494.jpg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/download-31.png-co-400x377.png",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/photo_2020-09-24_12-43-08-400x300.jpg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {
+            category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/81UV5oidWoL._SL1500_-400x400.jpg",
+            name:"Day Joy Asthprash Improves Lung Function...",
+            price:"1599",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+            img3:"https://www.uboric.com/wp-content/uploads/2020/09/Buckthorn-400x472.png",
+            img4:"https://www.uboric.com/wp-content/uploads/2020/09/seabuckthorn.jpg"
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+            name:"Day Joy Rich Berry Juice",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/Buckthorn.png",
+            name:"Day Joy SEABUCK THRON JUICE",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/10/Adicardial-400x775.jpg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/GAS5001-400x566.jpeg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/ccc502e7-5390-4fc2-b3af-ee6c5a2a8a3b-400x494.jpg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/download-31.png-co-400x377.png",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Day Joy",
+            url: "https://www.uboric.com/wp-content/uploads/2020/09/photo_2020-09-24_12-43-08-400x300.jpg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Face Mask",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/61CESDRRQqL._SL1100_-400x400.jpg",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Face Mask",
+            url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH_wBQgQqFaZJnKViiD9yMNxYuch351cfprQ&usqp=CAU",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Face Mask",
+            url: "data:image/jpeg;base64,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",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Oxi19",
+            url: "https://www.uboric.com/wp-content/uploads/2020/10/QSWQ-400x404.png",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Oxi19",
+            url: "https://www.uboric.com/wp-content/uploads/2020/10/QXC-150x146.png",
+            name:"Day Joy Adila Forte",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"Oxi19",
+            url: "https://www.uboric.com/wp-content/uploads/2020/10/WEF-400x406.png",
+            name:"Pain Relief Oil",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/A-32.png",
+            name:"Beard Brush pocket-size",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/D-16-400x400.png",
+            name:"Beard Comb pocket-size",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/a-13-400x400.png",
+            name:"Beard oil",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/cb-400x400.png",
+            name:"Beard Combo",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/as-1-400x400.png",
+            name:"Absolute care combo",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/a-24-400x400.png",
+            name:"charcoal combo",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/q-400x400.png",
+            name:"charcoal facial kit",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/a-20-400x400.png",
+            name:"charcoal face wash",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/d-11-400x400.png",
+            name:"Beard growth oil",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/bc-1-400x400.png",
+            name:"Beard growth onion oil",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/a-21-400x400.png",
+            name:"charcoal face pack",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/A-32.png",
+            name:"Beard Brush pocket-size",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/D-16-400x400.png",
+            name:"Beard Comb pocket-size",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/a-13-400x400.png",
+            name:"Beard oil",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/cb-400x400.png",
+            name:"Beard Combo",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/as-1-400x400.png",
+            name:"Absolute care combo",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/a-24-400x400.png",
+            name:"charcoal combo",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/q-400x400.png",
+            name:"charcoal facial kit",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/a-20-400x400.png",
+            name:"charcoal face wash",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/d-11-400x400.png",
+            name:"Beard growth oil",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/bc-1-400x400.png",
+            name:"Beard growth onion oil",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/a-21-400x400.png",
+            name:"charcoal face pack",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/A-32.png",
+            name:"Beard Brush pocket-size",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/D-16-400x400.png",
+            name:"Beard Comb pocket-size",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/a-13-400x400.png",
+            name:"Beard oil",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/cb-400x400.png",
+            name:"Beard Combo",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/as-1-400x400.png",
+            name:"Absolute care combo",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/a-24-400x400.png",
+            name:"charcoal combo",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/q-400x400.png",
+            name:"charcoal facial kit",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/a-20-400x400.png",
+            name:"charcoal face wash",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/d-11-400x400.png",
+            name:"Beard growth oil",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/bc-1-400x400.png",
+            name:"Beard growth onion oil",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+        {category:"Health Care",
+            type:"bmbysc",
+            url: "https://www.uboric.com/wp-content/uploads/2021/03/a-21-400x400.png",
+            name:"charcoal face pack",
+            price:"1299",
+            img1:"https://www.uboric.com/wp-content/uploads/2020/09/FORTE011-400x473.jpeg",
+            img2:"https://www.uboric.com/wp-content/uploads/2020/09/Richberries-400x472.png",
+           
+        },
+
+    ]
+
+   
+    
+    printLM(Data)
+    document.getElementById("category").addEventListener("change",myfunction)
+    function myfunction(){
+        let filteredarr=[]
+          let x = document.getElementById("category").value;
+          console.log(x)
+          Data.forEach(function(el){
+             if (el.type===x){
+               filteredarr.push(el);
+             }
+          })
+
+          document.getElementById("container").innerHTML="";
+          printLM(filteredarr);
+    }
+
+    function printLM(Data){
+        for(let i=0; i<Data.length; i++){
+            let div = document.createElement("div");
+            
+            let imgdiv=document.createElement("div")
+            
+            let img= document.createElement("img")
+            img.src= Data[i].url;
+            let p= document.createElement("p")
+            p.textContent=Data[i].name
+            
+            let h3= document.createElement("h3")
+            h3.textContent= "₹"+Data[i].price
+            
+            imgdiv.append(img)
+            div.append(imgdiv, p, h3);
+            document.querySelector("#container").append(div);
+            
+        }
+    }
+
+</script>
