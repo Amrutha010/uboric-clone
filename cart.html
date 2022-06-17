@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart page</title>
+    <style>
+        *{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #head{
+            border: 1px solid;
+            width: 60%;
+            text-align: center;
+            margin-left: 20%;
+            padding: 1%;
+            background: linear-gradient(#e66465, #9198e5);
+            margin-bottom: 3%;
+        }
+      
+        .images{
+            width:100px;
+            height:80px
+        }
+        input{
+            width: 28px;
+            row-gap: 12%;
+        }
+        table{
+            width: 60%;
+            margin-left: 5%;
+        }
+        #cart{
+            background-color: aliceblue;
+            width: 25%;
+            height: 300px;
+            padding: 4%;
+            justify-content: center;
+            align-items: center;
+            margin-left: 5%;
+        }
+        #body{
+            display: flex;
+        }
+        button{
+            background-color: gold;
+            padding: 12px;
+        }
+        #update{
+            
+            display: flex;
+            background-color: gold;
+            padding: 12px;
+            justify-items: right;
+            margin-left: 85%;
+        }
+        #total{
+        width: 60%;
+         }    
+</style>
+</head>
+<body>
+    <div id="head">Amazing offers on checkout</div>
+    <div id="body">
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>product</th>
+                <th>price</th>
+                <th>quantity</th>
+                <th>subtotal</th>
+            </tr>
+        
+        </thead>
+        <hr>
+        <tbody>
+              <!-- appending the cart products hear -->
+        </tbody>
+    </table>
+    <div id="cart">
+        <h1>Cart Totals</h1>
+        <h3>Subtotal <p id="cart_total"></p></h3>
+        <hr>
+        <button>Proceed to checkout</button>
+    </div>
+    </div>
+    <div id="total">
+        <hr>
+        <button id="update">Update Cart</button>
+        <hr>
+    </div>
+   
+</body>
+</html>
+<script>
+
+ let y=   localStorage.getItem("details")
+ let x= JSON.parse(y);
+ var sum=0;
+ for(i=0;i<y.length;i++){
+
+ let tr= document.createElement("tr");
+ let th1=document.createElement("th");
+ th1.innerText="❌";
+ th1.addEventListener("click",deleterow);
+ function deleterow(){
+    tr.innerText="";
+    
+}
+ let th2=document.createElement("th");
+let img= document.createElement("img")
+img.setAttribute("class","images")
+img.src= x[i].pimage;
+th2.append(img);
+let th3=document.createElement("th");
+th3.innerText=x[i].pname;
+let th4=document.createElement("th");
+th4.innerText="₹"+x[i].pprice;
+let th5=document.createElement("th");
+var input = document.createElement("input");
+input.type = "number";
+input.value="1";
+var th6=document.createElement("th")
+let price=(x[i].pprice)
+sum+=Number(price);
+document.getElementById("cart_total").innerText=sum;
+th6.innerText=price;
+
+th5.append(input) 
+tr.append(th1,th2,th3,th4,th5,th6);
+document.querySelector("tbody").append(tr);
+
+ }
+
+ 
+</script>
