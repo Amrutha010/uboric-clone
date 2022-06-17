@@ -25,7 +25,7 @@
 
     #container>div{
         
-        height:300px;
+        height:380px;
        
        align-content: center;
        text-align: center;
@@ -62,7 +62,7 @@
         </select>
     </div>
     <div id="container">
-
+        
     </div>
 </body>
 </html>
@@ -869,11 +869,41 @@
             
             let h3= document.createElement("h3")
             h3.textContent= "₹"+Data[i].price
+           
+            let button = document.createElement("button")
+            button.innerText="ADD TO CART";
+            button.style.backgroundColor="skyblue"
+            button.addEventListener("click",addtocart)
+            let arr=JSON.parse(localStorage.getItem("details"))||[]
+            let myAnchor=document.createElement("a");
+            function addtocart(){
+                if(button.innerText=="ADD TO CART"){
+                    let productdata=
+                    {
+                        pimage:Data[i].url,
+                       pname:Data[i].name,
+                        pprice:Data[i].price,
+                    }
+                arr.push(productdata);
+        
+                console.log("details",JSON.stringify(arr))
+                
+                localStorage.setItem("details",JSON.stringify(arr))
+                alert(Data[i].name+"successfully added to the cart")
+                button.innerText="GO TO CART"
+                }else if(button.innerText=="GO TO CART"){
+                    
+                    myAnchor.setAttribute("href","cart.html");
+                }
+                
+              
+            }
             
             imgdiv.append(img)
-            div.append(imgdiv, p, h3);
+            myAnchor.append(button)
+            div.append(imgdiv, p, h3,myAnchor);
             document.querySelector("#container").append(div);
-            
+           
         }
     }
 
