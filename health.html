@@ -301,9 +301,10 @@
         <label for=""><h2 id="lb2">Product Categories</h2></label>
         <select name="" id="select">
           <option value="All">All</option>
-          <option value="Top Wear" id="two">Top Wear</option>
-          <option value="Bottom Wear" id="three">Bottom Wear</option>
-          <option value="Foot Wear" id="three">Foot Wear</option>
+          <option value="Day Joy" id="two">Day Joy</option>
+          <option value="Face Mask" id="three">Face Mask</option>
+          <option value="Oxi19" id="three">Oxi19</option>
+          <option value="bmbysc" id="three">Bombay Shaving Company</option>
         </select>
         <hr />
         <button id="clear">Clear</button>
@@ -405,7 +406,7 @@
 </html>
 <script>
   let Sdata = Data.filter(function (el) {
-    if (el.category === "Men's fashion") {
+    if (el.category === "Health Care") {
       return el;
     }
   });
@@ -515,7 +516,7 @@
   document.getElementById("catlog").addEventListener("click", function () {
     let x = document.getElementById("catlog").value;
     if (x === "Category") {
-    } else if (x === "mens.html") {
+    } else if (x === "health.html") {
       location.reload()
     } else {
       location.href = x;

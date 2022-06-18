@@ -1,99 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      body {
-        display: flex;
-        justify-content: end;
-      }
-      #sidebar {
-        border: 1px solid;
-        width: 20%;
-      }
-      #container {
-        width: 80%;
-        padding: 10px 10px 10px 10px;
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    h1{
+      text-align: center;
+      color:black;
+      margin: 80px auto auto auto;
+    }
+    #container{
+      width: 100%;
+      height: 1600px;
+      display: flex;
+      border: 5px red;
+      background-color: white;
+    }
+    #first{
+      width: 60%;
+      display: flex;
+      justify-content: center;
+    }
+    #second{
+      width: 50%;
+    }
+    #first>img{
+      width: 50%;
+      height: 490px;
+      margin-right: 14%;
+      text-align: center;
+    
+    }
+    #second>img{
+      width: 150px;
+      display: block;
+      margin:30px auto 25px auto;
+    }
+    #second>p{
+     margin-top: 10px;
+     text-align: center;
+      font-size: 22px;
+      font-family:sans-serif;
+    }
+   
+    #second>h1{
+      text-align: center;
+      width: 800px;
+      /* margin-right: 50%; */
+      font-size: 30px;
+      font-family:sans-serif;
+    }
+    #innerdiv{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: 130px;
+    }
+    
+    #innerdiv>div>img{
+      margin-top: 3%;
+      margin-left: 42%;
+      width: 80px;
+      
+    }
+    #innerdiv>#div4>img{
+      margin-bottom: -8%;
+      margin-left: 30%;
+      width: 80px;
+    }
+    #innerdiv>#div2>img{
+      margin-bottom: 8%;
+      margin-left: 37%;
+      width: 80px;
+    }
+    
+    #innerdiv>div>p:nth-child(2){
+      margin: 5px auto auto 85px;
+    }
 
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-      }
+    #innerdiv>div>p{
+      width: 50%;
+      font-size: 20px;
+      margin-left: 20%;
+      display: block;
+     
+      margin-bottom: 5px;
+    }
+    select{
+      margin-top: 0px;
+      display: block;
+      width: 190px;
+      font-size: 20px;
+      height: 50px;
 
-      #container > div {
-        height: 300px;
+      margin-bottom: 20px;
+    }
+    #btn1{
+      height: 60px;
+      width: 200px;
+      font-size: 20px;
+      border: 2px solid;
+      background-color: #ffce61;
+    }
+    #btn2{
+      height: 60px;
+      width: 50%;
+      font-size: 20px;
+      border: 2px solid;
+      margin-left: 50px;
+      background-color: #ffce61;
+    }
+    #btn3{
+      height: 60px;
+      width: 400px;
+      font-size: 20px;
+      display: block;
+      margin: 20px auto auto auto;
+      border: 2px solid;
+      background-color: #ffce61;
+    }
+    #cid{
+      display: flex;
+      width: 100%;
+    }
+    #cid>input{
+      height: 58px;
+      width: 150px;
+      font-size: 30px;
+      margin-left: 30px;
+      margin-top: 2px;
 
-        align-content: center;
-        text-align: center;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      }
-      #container > div > div {
-        width: 100%;
-        height: 70%;
-      }
-      #container > div > div > img {
-        max-width: 100%;
-        height: 100%;
-      }
-      #container > div > p {
-        white-space: nowrap;
-        width: 230px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        margin-left: 10px;
-      }
-    </style>
-    <script src="data.js"></script>
-  </head>
-  <body>
-    <div id="sidebar">
-      <select name="" id="category">
-        <option value="Kitchen Ware">Kitchen Ware</option>
-        <option value="Men's fashion">Men's fashion</option>
-        <option value="Women's fashion">Women's fashion</option>
-      </select>
-      <input type="range">
-    </div>
-    <div id="container"></div>
-  </body>
-</html>
-<script>
-    printLM(Data);
-    document.getElementById("category").addEventListener("change", myfunction);
-    function myfunction() {
-      let filteredarr = [];
-      let x = document.getElementById("category").value;
-      console.log(x);
-      Data.forEach(function (el) {
-        if (el.category === x) {
-          filteredarr.push(el);
+    }
+    hr{
+      margin-top: 20px;
+    }
+    ul>li{
+      font-size: 25px;
+      margin-top: 10px;
+    }
+  
+    *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
         }
-      });
+        #promote{
+            text-align: center;
+            height: 30px;
+            background-color: rgb(5, 139, 196);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: aliceblue;
+        }
+        #boxes{
+            display: flex;
+            height: 100px;
+        }
+        #boxes>div{
+            width: 33%;
+         
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #search{
+            width: 70%;
+            height: 40px;
+           
+            font-size: larger;
+            padding-left: 10px;
 
-      document.getElementById("container").innerHTML = "";
-      printLM(filteredarr);
-    }
-
-    function printLM(Data) {
-      for (let i = 0; i < Data.length; i++) {
-        let div = document.createElement("div");
-
-        let imgdiv = document.createElement("div");
-
-        let img = document.createElement("img");
-        img.src = Data[i].url;
-        let p = document.createElement("p");
-        p.textContent = Data[i].name;
-
-        let h3 = document.createElement("h3");
-        h3.textContent = "₹" + Data[i].price;
-
-        imgdiv.append(img);
-        div.append(imgdiv, p, h3);
-        document.querySelector("#container").append(div);
+            border-radius: 20px 0px 0px 20px;
+        }
+        #searchbtn{
+            width: 80px;
+            height: 44px;
+            /* border: 1px solid ; */
+            background-color: black;
+            color: white;
+            border-radius: 0px 20px 20px 0px;
+            font-size: 18px;
+        }
+       
+        #logo>div{
+           width: 100%;
+           display: flex;
+           justify-content: end;
+           padding-right: 40px;
+        }
+        #logo>div>div>img{
+            width: 50px;
+            margin-left: 10px;
+        }
+        #toggle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #toggle>div{
+            margin-left: 5px;
+            padding: 10px 10px 10px 10px;
+            font-size: larger;
+        }
+        #toggle>div:hover{
+            background-color: black;
+            color: white;
+        }
+        #catlog:hover{
+            background-color: black;
+            color: white;
+        }
+        #catlog{
+            border: 0px;
+            font-size: large;
+            height: 40px;
+            text-align: center;
+            margin-top: 15px;
+            background-color: transparent;
+            /* white-space: 20px; */
+        }
+        .bttt:hover{
+          filter: opacity(.5);
+        }
+       
+        #head1{
+          font-size: 50px;
+        
+          padding-bottom: 30px;
+        }
+        #searchbtn:hover {
+        filter: opacity(0.5);
       }
+      #profiles:hover,
+      #carts:hover {
+        filter: opacity(0.5);
+      }
+      #first>img{
+        margin-top: 150px;
+      }
+  </style>
+   <link rel="stylesheet" href="dropdown.css">
+   <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+   <script src="data.js"></script>
+   <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div id="promote">FOR ONLINE PAYMENT EXTRA ₹100 DISCOUNT ON ORDERS ABOVE ₹500</div>
+    <div id="navbar">
+
+        <div id="boxes">
+            <div><input type="text"id="search" placeholder="Search here..."><button id="searchbtn">Search</button></div>
+            <div><img src="https://www.uboric.com/wp-content/uploads/2021/04/uboric.svg" alt="" style="width: 190px;"></div>
+            <div id="logo">
+                
+                <div>
+                    <div id="profiles"><img src="profile.png" alt=""></div>
+                    <div id="carts"><img src="cart.png" alt=""></div>
+                </div>
+                
+            </div>
+        </div>
+        <div id="toggle">
+
+                <div id="">Home</div>
+            
+                    <select name="" id="catlog"  onmouseover="menu()">
+                      <option value="category">category</option>
+                        <option value="mens.html">Men's Fashion</option>
+                        <option value="womens.html">Women's Fashion</option>
+                        <option value="kitchen.html">Kitchen Ware</option>
+                        <option value="health.html">Health & care</option>
+                        <option value="foot.html">Foot Wear</option>
+                        <option value="accessories">Accessories</option>
+                    </select>
+                
+                <div id="">Customer/Guest login</div>
+                <div id="">Merchant/Bulk Order</div>
+                <div id="">Become A Seller</div>
+                
+        </div>
+
+    </div>
+
+     <h1 id="head1"></h1>
+     <div id="container">
+        <div id="first"></div>
+        <div id="second">
+            <h1 id="proname">Reebok Men Sports Lace Up</h1>
+            <p id="proprice">₹2,599.00 (Inclusive of all taxes)</p>
+            <img src="https://www.uboric.com/wp-content/uploads/2020/12/guarantee.svg" alt="">
+            <div id="innerdiv">
+                 <div id="div1"><img src="data:image/png;base64,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" alt=""><p>7days Return</p></div>
+                 <div id="div2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS0TOd0EnLz7-emR0DYNWYeuUOiK9UC8Kc3w&usqp=CAU" alt=""><p>24/7 Online Support</p></div>
+                 <div id="div3"><img style="height:60px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqX4iVgSvG7bjDPdf6QAi9wx4pLAEoecNX1g&usqp=CAU" alt=""><p>Fast Delivery in India</p></div>
+                 <div id="div4"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEX///8aGhoAAAAUFBQNDQ1lZWU6Ojrc3Nw3Nzc0NDTp6emJiYkYGBgHBwcQEBBYWFivr6/w8PBLS0swMDBTU1O/v7/29vZtbW3R0dHFxcUkJCR3d3fY2NiQkJDn5+egoKCpqamampp2dnZMTEzKyspoaGhCQkKUlJQhISG2trYttGzcAAAEhElEQVR4nO2d63aiMBRGIUHxQqB4oSrW2o51xvd/weGmgAaocAIs/PZPjs1imyuRk2oaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI/sP1Y26xf26mNP5reeBgVaer+wgq98uibxcx3Gu9YpgDPHbS5octG1SAmCm40Fe1uBMZw1VPT0fgsGirrXyPCdXUuybKNPpCMfe28iuLkKciacUZ9wxK37sE0DQ8eICxHLbZMvSgnbZTIEGk79QmZJFYoV3Y0RskoU2ax2EW+xId8168yq8HZxQ2VvtYvwRdMS1JLUgPBrl7Cwo1GUESwclOCyaES1F7VLGEetgC8Jb4qWZXyD49oFJIZTwnuiZQrDKmDYOTCsBIadQ2W4NPsK0XwYPDr1leT+Ghv2HRjCsP/AEIb9B4Yw7D8whGH/gSEM+w8MYdh/YPgLQ95XyAzHk34yJjLkk9oFqGaCPe8qYNg5MKwEhp0Dw0pg2DkwrASGnQPDSl7Z0DU3p/0hc2Fmnk5m/beRa6LKcD8fi+hlj93oEl3Y+Mv47Y/l96nB/T6PGsPNijEeZzsYLBRan5m47icINr00vOtnUGLoM/u2A2QF7dRz0gvRRfanvcaqwNCd3JJodCtMOTLFQ+KX0SjF4ynoDV1upCYsaI97WeKXxdrqjfSGu0yDFD/BCGpId1Stpgllv4XcMM3zCqvQ1bSFIRPUdbul7Tlqw1NOcK5pRyb1C6N/aRQqoDZcZAdNdihLTmwpC4XYcJOtMft8S8qRV+InkUQpxIa+uDPI1ekd7STaEBtOs22S7a9ZR0WVmF21atv5A59eSfB4C67LgrSGbrZNWsLNt9pHw2yuvC99hTn5Dr5lwX/JwuhdFtxdOzmtYU6I78q7YWD4lZazlX4yydtclwUv0iAbKTHM3Ul47avccJ6W8y5P6Y/H25F8To0TQ4uCngrDy73h318bOgX3Ga18CsarOLgqCLoqDHNNLRwqP8sNP9JyPqSftFgUnMuDIgr60iDXNRWGZm6k0b2CDnQzPKbluExSiVbSU2dMUk9WMp8e5MFr2bSGnpGdHILJwCw3zD5CmWfJiHgdivbjx5i4BSeSv7ytJojnw1yfCCcDq2Q+tFg+/9ud3eOVBUv/Mo0RG+bW2WH+tLyTxBij8qJpIDbMrWEsO3z8LWmkrTwEUz9b5Ea9sJkWzAJ6vDBvAWpDL1uJ9jgcXot6YktbNeTP+LkpMdymKZoSs5OhSuj3abLLGM69cNUsFWxw2shTKNhNnGfapQiHyx+JYmuCSnaEj5nlSbT0nN/vJ3JW/yCOZ1Gy520u0oVU1N1Oy+zKirN/NIeo/QpFv8xsV8HCybBtWzD2HV64BGsyEVwwggvTVk96UfbrmnuZjxZnx/+8bvwe3vzRObhwPNx/VC34hbQSGHYODCt5GcMBnxM1/LO+hn9e2/DP3Bv+uYnDP/vyBc4vHf4ZtC9wjvDwz4J+gfO8X+BMdm345+qHDP1/IwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAh8R+s8WbNRmDw4QAAAABJRU5ErkJggg==" alt=""><p>Secure Payment</p></div>
+            </div>
+            <h2>size :</h2>
+            <select name="" id="">
+               <option value="">Choose an Option</option>
+               <option value="7">7</option>
+               <option value="8">8</option>
+               <option value="9">9</option>
+               <option value="10">10</option>
+            </select>
+            <div id="cid">
+                <button id="btn1" class="bttt">BUY NOW</button>
+                <input type="number" style="text-align: center ;" min="1" placeholder="1">
+                <button id="btn2" class="bttt">ADD TO CART</button>
+           </div>
+            <hr>
+            <button id="btn3" class="bttt">SEND ENQUIRY</button>
+            <div>
+                <ul>
+                      <li> Guaranteed delivery with 100% original products</li>
+                      <li>COD available on some categories</li>
+                      <li>FOR ONLINE PAYMENT EXTRA ₹100 DISCOUNT ON ORDERS ABOVE ₹500</li>
+                      <li>EMI OPTION AVAILABLE</li>
+                      <li>FREE DELIVERY ON ORDERS AVOVE 500 FOR COD & FOR ONLINE PAYMENT FREE DELIVERY AVAILABLE ON ALL ORDERS</li>
+                      <li>BELOW ₹500 CASH ON DELIVERY CHARGES ₹49</li>
+                      <li>YOU WILL RECEIVE PRODUCTS IN NEXT 5 to 7 DAYS ALL OVER INDIA</li>
+                      <li>RETURN AVAILABLE ON WRONG OR DAMAGED PRODUCT DELIVERED, READ RETURN POLICY TO KNOW MORE.</li>
+                </ul>         
+             </div>
+       </div>
+
+      </div>
+
+       <!-- l,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,footer.................................... -->
+       <section class="footer">
+        <div class="social">
+            <a href="https://www.instagram.com/accounts/login/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/login/"  target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/i/flow/login" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://accounts.snapchat.com/accounts/login?client_id=geo" target="_blank"><i class="fab fa-snapchat"></i></a>
+        </div>
+    
+        <ul class="list">
+            <li>
+                <a href="#">About Us</a>
+            </li>
+            <li>
+                <a href="#">Contact Us</a>
+            </li>
+            <li>
+                <a href="#">Shipping & Returns</a>
+            </li>
+            <li>
+                <a href="#">My Account</a>
+            </li>
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="#">Terms & Condition</a>
+            </li>
+        </ul>
+    
+        <p class="COPYRIGHT">2019-2021 UBORIC.ALL RIGHTS RESERVED.</p>
+
+
+
+
+        
+	<div class="wrapper">
+		<div class="toggle_button">
+			<ul>
+				<li>
+					<a class="share_btn">
+						<span class="text">SHARE</span>
+						<span class="icon"><i class="fas fa-plus"></i></span>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/" class="sm facebook"  target="_blank">
+						<span class="icon">
+							<i class="fab fa-facebook-f"></i>
+						</span>
+						<span class="text">Facebook</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/" class="sm twitter"  target="_blank">
+						<span class="icon">
+							<i class="fab fa-twitter"></i>
+						</span>
+						<span class="text">Twitter</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/accounts/login/" class="sm instagram"  target="_blank">
+						<span class="icon">
+							<i class="fab fa-instagram"></i>
+						</span>
+						<span class="text">Instagram</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://web.whatsapp.com/" class="sm whatsapp"  target="_blank">
+						<span class="icon">
+							<i class="fab fa-whatsapp"></i>
+						</span>
+						<span class="text">Whatsapp</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+      </section>
+    
+       
+</body>
+</html>
+
+<script>
+   let x=localStorage.getItem("display");
+    
+   let value=Data.filter(function(el){
+    if(el.id===x){
+      return el;
     }
+   })
+   myfunction();
+   function myfunction(){
+    let u=value[0].url
+    let img=document.createElement("img")
+    img.src=u;
+
+    document.getElementById("first").append(img)
+
+    document.getElementById("proname").textContent=value[0].name
+    document.getElementById("head1").textContent=value[0].name
+    document.getElementById("proprice").textContent="₹"+value[0].price+" (Inclusive of all taxes)"
+    // document.getElementById("first")
+   }
+
+   document.getElementById("catlog").addEventListener("click",function(){
+   let x= document.getElementById("catlog").value
+
+   if(x==="category"){
+
+   }else{
+
+     location.href= x
+   }
+   })
+   
+
+	let share_btn = document.querySelector(".share_btn");
+	let toggle_button = document.querySelector(".toggle_button");
+
+	share_btn.addEventListener("click", function(){
+		toggle_button.classList.toggle("active");
+	})
 </script>

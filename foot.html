@@ -405,7 +405,7 @@
 </html>
 <script>
   let Sdata = Data.filter(function (el) {
-    if (el.category === "Men's fashion") {
+    if (el.type === "Foot Wear") {
       return el;
     }
   });
@@ -515,7 +515,7 @@
   document.getElementById("catlog").addEventListener("click", function () {
     let x = document.getElementById("catlog").value;
     if (x === "Category") {
-    } else if (x === "mens.html") {
+    } else if (x === "foot.html") {
       location.reload()
     } else {
       location.href = x;
