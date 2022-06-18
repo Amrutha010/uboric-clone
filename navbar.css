@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  #promote {
+    text-align: center;
+    height: 30px;
+    background-color: rgb(5, 139, 196);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+  }
+  #boxes {
+    display: flex;
+    height: 100px;
+  }
+  #boxes > div {
+    width: 33%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #search {
+    width: 70%;
+    height: 40px;
+
+    font-size: larger;
+    padding-left: 10px;
+
+    border-radius: 20px 0px 0px 20px;
+  }
+  #searchbtn {
+    width: 80px;
+    height: 44px;
+    /* border: 1px solid ; */
+    background-color: black;
+    color: white;
+    border-radius: 0px 20px 20px 0px;
+    font-size: 18px;
+  }
+
+  #logo > div {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-right: 40px;
+  }
+  #logo > div > div > img {
+    width: 50px;
+    margin-left: 10px;
+  }
+  #toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #toggle > div {
+    margin-left: 5px;
+    padding: 10px 10px 10px 10px;
+    font-size: larger;
+  }
+  #toggle > div:hover {
+    background-color: black;
+    color: white;
+  }
+  #catlog:hover {
+    background-color: black;
+    color: white;
+  }
+  #catlog {
+    border: 0px;
+    font-size: large;
+    height: 40px;
+    text-align: center;
+    margin-top: 15px;
+    background-color: transparent;
+    /* white-space: 20px; */
+  }
+  .bttt:hover {
+    filter: opacity(0.5);
+  }
+
+  #head1 {
+    font-size: 50px;
+
+    padding-bottom: 30px;
+  }
+  #searchbtn:hover {
+    filter: opacity(0.5);
+  }
+  #profiles:hover,
+  #carts:hover {
+    filter: opacity(0.5);
+  }
