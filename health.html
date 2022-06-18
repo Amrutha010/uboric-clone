@@ -463,7 +463,7 @@
       printLM(filteredarr);
     }
   }
-
+  let array= JSON.parse(localStorage.getItem("cartdata")) || [];
   function printLM(Sdata) {
     for (let i = 0; i < Sdata.length; i++) {
       let div = document.createElement("div");
@@ -482,6 +482,18 @@
       let cartbtn = document.createElement("button");
       cartbtn.setAttribute("id","carbtn")
       cartbtn.innerText="ADD TO CART";
+      cartbtn.addEventListener("click",function(){
+        array.push(Sdata[i])
+       
+       localStorage.setItem("cartdata",JSON.stringify(array))
+      })
+
+      imgdiv.addEventListener("click", function(){
+        
+        let z= Sdata[i].id;
+         localStorage.setItem("display", z);
+         location.href = "display.html";
+           });
 
       imgdiv.append(img);
       div.append(imgdiv, p, h3,cartbtn);
@@ -489,19 +501,7 @@
     }
   }
 
-  let element = document.querySelectorAll("#container>div");
-
-  for (let i = 0; i < element.length; i++) {
-    element[i].addEventListener("click", display);
-  }
-
-  function display() {
-    let displayvalue = event.currentTarget;
-    let z = displayvalue.id;
-    localStorage.setItem("display", z);
-    location.href = "display.html";
-  }
-
+  
 
 
   
@@ -522,4 +522,8 @@
       location.href = x;
     }
   });
+
+  document.getElementById("carts").addEventListener("click",function(){
+    location.href="./cart.html"
+  })
 </script>

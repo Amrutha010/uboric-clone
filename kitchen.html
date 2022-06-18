@@ -301,9 +301,9 @@
         <label for=""><h2 id="lb2">Product Categories</h2></label>
         <select name="" id="select">
           <option value="All">All</option>
-          <option value="Top Wear" id="two">Top Wear</option>
-          <option value="Bottom Wear" id="three">Bottom Wear</option>
-          <option value="Foot Wear" id="three">Foot Wear</option>
+          <option value="Air Tight Containers" id="two">Air Tight Containers</option>
+          <option value="gas Lighter" id="three">Gas Lighter</option>
+          <option value="Kitchen Tools" id="three">Kitchen Tools</option>
         </select>
         <hr />
         <button id="clear">Clear</button>
@@ -462,8 +462,12 @@
       printLM(filteredarr);
     }
   }
+  
+  
+  
+  let array= JSON.parse(localStorage.getItem("cartdata")) || [];
 
-  function printLM(Sdata) {
+  function printLM(Sdata,arr) {
     for (let i = 0; i < Sdata.length; i++) {
       let div = document.createElement("div");
       let d = Sdata[i].id;
@@ -481,27 +485,24 @@
       let cartbtn = document.createElement("button");
       cartbtn.setAttribute("id","carbtn")
       cartbtn.innerText="ADD TO CART";
+      cartbtn.addEventListener("click",function(){
+        array.push(Sdata[i])
+       
+       localStorage.setItem("cartdata",JSON.stringify(array))
+      })
 
+
+      imgdiv.addEventListener("click", function(){
+        
+        let z= Sdata[i].id;
+         localStorage.setItem("display", z);
+         location.href = "display.html";
+           });
       imgdiv.append(img);
       div.append(imgdiv, p, h3,cartbtn);
       document.querySelector("#container").append(div);
     }
   }
-
-  let element = document.querySelectorAll("#container>div");
-
-  for (let i = 0; i < element.length; i++) {
-    element[i].addEventListener("click", display);
-  }
-
-  function display() {
-    let displayvalue = event.currentTarget;
-    let z = displayvalue.id;
-    localStorage.setItem("display", z);
-    location.href = "display.html";
-  }
-
-
 
   
 	let share_btn = document.querySelector(".share_btn");
@@ -521,4 +522,8 @@
       location.href = x;
     }
   });
+
+  document.getElementById("carts").addEventListener("click",function(){
+    location.href="./cart.html"
+  })
 </script>
