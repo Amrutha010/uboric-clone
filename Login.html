@@ -348,44 +348,43 @@
   </body>
 </html>
 <script>
-  let RegisterUser = JSON.parse(localStorage.getItem("SignupData"));
+let RegisterUser = JSON.parse(localStorage.getItem("SignupData"));
 
-  document.querySelector("#Loginform").addEventListener("submit", Login);
+document.querySelector("#Loginform").addEventListener("submit", Login);
 
-  function Login(event) {
-    event.preventDefault();
-    let UserEmail = document.querySelector("#email").value;
-    let UserPassword = document.querySelector("#password").value;
+function Login(event) {
+  event.preventDefault();
+  let UserEmail = document.querySelector("#email").value;
+  let UserPassword = document.querySelector("#password").value;
 
-    if (UserEmail === "" || UserPassword === "") {
-      alert("Please Enter the Login Details");
-    } else {
-      for(let i=0; i<RegisterUser.length; i++) {
-        if (UserEmail === RegisterUser[i].Email && UserPassword === RegisterUser[i].Password) {
-          alert("Login Successful");
-          location.href = "index.html";
-          localStorage.setItem(RegisterUser[i].)
-          break;
-        } else {
-          alert("Incorrect Credentials");
-          window.location.reload();
-        }
-      };
-    }
+  if (UserEmail === "" || UserPassword === "") {
+    alert("Please Enter the Login Details");
+  } else {
+    RegisterUser.forEach((element) => {
+      if (UserEmail === element.Email && UserPassword === element.Password) {
+        alert("Login Successful");
+        location.href = "index.html";
+      } else {
+        alert("Incorrect Credentials");
+        window.location.reload();
+      }
+    });
   }
+}
 
-  function LP() {
-    window.location.href = "Login.html";
-  }
+function LP() {
+  window.location.href = "Login.html";
+}
 
-  function RP() {
-    window.location.href = "Signup.html";
-  }
+function RP() {
+  window.location.href = "Signup.html";
+}
 
-  // document.querySelector("#Home").addEventListener("click", Home);
-  // function Home() {
-  //   location.href = "Home.html";
-  // }
+document.querySelector("#Home").addEventListener("click", Home);
+function Home() {
+  location.href = "index.html";
+}
+
   document.getElementById("catlog").addEventListener("click", function () {
     let x = document.getElementById("catlog").value;
     if (x === "Login.html") {
