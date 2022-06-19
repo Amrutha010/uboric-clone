@@ -595,7 +595,7 @@
 </html>
 <script>
   document.querySelector("#SignUpform").addEventListener("submit", SignUp);
-  let Data = JSON.parse(localStorage.getItem("SignupData")) || [];
+  let Data = [];
   function SignUp() {
     event.preventDefault();
     let LoginName = document.querySelector("#FirstName").value;
@@ -621,7 +621,7 @@
         myobj = {
           Email: Loginemail,
           Password: Loginpassword,
-          name: LoginName +" "+ LoginSurname
+          name: LoginName + " " + LoginSurname,
         };
 
         Data.push(myobj);
@@ -631,6 +631,10 @@
     }
   }
 
+  document.querySelector("#Home").addEventListener("click", Home);
+  function Home() {
+    location.href = "index.html";
+  }
   document.querySelector("#Home").addEventListener("click", Home);
   function Home() {
     location.href = "index.html";
