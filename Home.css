@@ -1,0 +1,110 @@
+#kitchen {
+    width: 100%;
+    height: auto;
+  }
+  #kitchen > img {
+    width: 100%;
+    height: auto;
+  }
+  h1 {
+    text-align: center;
+    color: #006064;
+    margin-bottom: 2%;
+    width: 70%;
+    margin-left: 20%;
+  }
+  #kitchencat {
+    display: flex;
+
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #kitchencat > img {
+    width: 30%;
+    height: auto;
+  }
+  #midContainer > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  #midContainer > div > img {
+    width: 100%;
+    margin: auto;
+  }
+  #midcontainer > div > div {
+    width: 50%;
+  }
+  #midContainer > div > div > img {
+    width: 100%;
+    margin: auto;
+  }
+  #others {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  #others > img {
+    width: 18%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  #spices {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  #spices > img {
+    width: 18%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  #foot {
+    width: 98%;
+    margin-left: 1%;
+  }
+  #shoes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  #shoes > img {
+    width: 18%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  #box {
+    width: 80%;
+    margin: auto;
+  }
+  #box > img {
+    width: 100%;
+  }
+  #footer_text {
+    width: 80%;
+    margin-top: 2%;
+    margin-left: 10%;
+
+    padding-top: 4%;
+  }
+
+  h5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  #midContainer {
+    width: 100%;
+  }
+
+  #Home_stuff{
+margin-top: 0;
+margin-bottom: 0%;
+
+  }
