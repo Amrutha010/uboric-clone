@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
 *{
 	margin: 0;
 	padding: 0;
@@ -8,25 +8,22 @@
 	font-family: 'PT Sans', sans-serif;
 }
 
-
+body{
+	background: #58b600;
+}
 
 .wrapper{
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	position: fixed;
-	border-radius: 20px;
-	bottom: -1%;
-	left: 9%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
 	transform: translate(-50%,-50%);
-	background-color: #0000006e;
 }
 
 .toggle_button{
-	
 	width: 250px;
-	height: 72px;
-	background-color: rgba(23, 23, 23, 2) ;
-	border-radius: 20px;
-	
+	height: 65px;
+	background: #fff;
+	border-radius: 50px;
 	overflow: hidden;
 	transition: all 0.2s ease;
 }
@@ -34,7 +31,6 @@
 .toggle_button ul li a{
 	display: flex;
 	align-items: center;
-	/* justify-content: center; */
 	height: 65px;
 	padding: 0 35px;
 }
@@ -74,7 +70,6 @@
 	position: relative;
 	width: 35px;
 	height: 35px;
-	
 	background: red;
 	border-radius: 50%;
 	margin-right: 15px;
