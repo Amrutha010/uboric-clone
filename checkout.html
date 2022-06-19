@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #higher{
+            position:sticky;
+            top:0px;
+
+            width: 78%;
+            height: 70px;
+            margin:auto ;
+            font-size: 15px;
+            font-weight: bolder;
+            font-family:sans-serif;
+            display: flex;
+            align-items: center;
+            padding-left: 35px;
+            background-color: black;
+            color: white;
+        }
+        hr{
+            width: 80%;
+        }
+        #bos{
+            
+            width: 80%;
+            margin: auto;
+            display: flex;
+        
+        }
+        #left{
+           position:sticky;
+           top:10%;
+           left:10%;
+            height: 500px;
+            width: 60%;
+        }
+        #right{
+          
+            height: 1600px;
+            width: 40%;
+            
+        }
+        .full{
+            width:90%;
+            height:40px
+        }
+        h2{
+            font-size: 12px;
+            font-family: Lato,sans-serif;
+        }
+        .di{
+          
+            width:90%;
+            display:flex;
+            justify-content: space-between;
+        }
+        input{
+            height: 30px;
+            width: 97%
+        }
+        #ad{
+            width:89%
+        }
+        #sel2{
+            width: 170px;
+            height: 39px;
+        }
+        #sel1{
+            width: 90%;
+            height: 39px;
+        }
+        h1{
+            font-family: sans-serif;
+        }
+        /***********************************************************************************************right*************************************  */
+        .divi{
+            width: 90%;
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+        }
+        #pr{
+            width: 60%;
+        }
+        hr{
+            width: 98%;
+        }
+        #hrr{
+            font-size: 50px;
+        }
+        #right{
+            background-color: #fafafa;
+            padding: 10px;
+        }
+        #buts{
+            width: 98%;
+            height: 70px;
+            margin: 20px auto auto auto;
+            background-color: black;
+            color: white;
+            font-size: 13px;
+            font-weight: bolder;
+            font-family:sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #nouse{
+            border: 2px solid black;
+            width: 90%;
+            height: auto;
+            font-size: 22px;
+            margin: 10px auto auto auto;
+        }
+        #faltu{
+            border: 2px solid yellow;
+            width: 90%;
+            height: 90px;
+            font-size: 22px;
+            margin: 10px auto auto auto;
+            background-color: #ffce61;
+           
+            padding: 10px
+        }
+        #blac{
+            width: 95%;
+            height: 70px;
+            margin: 20px auto auto auto;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            font-weight: bolder;
+            font-family:sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #pays{
+            width: 95%;
+            height: 70px;
+            margin: 20px auto auto auto;
+         
+            color: white;
+            font-size: 15px;
+            font-weight: bolder;
+            font-family:sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        #pays{
+            width: 95%;
+            height: 50px;
+            font-size: 28px;
+            color: blue;
+        }
+        #inf{
+            
+            width: 89%;
+            height: 90px;
+            font-size: 19px;
+            margin: 10px auto auto auto;
+            padding: 10px;
+            font-family: sans-serif;
+        }
+        #bts{
+            width: 98%;
+            height: 70px;
+            margin: 20px auto auto auto;
+            background-color: #ffce61;
+            color: black;
+            font-size: 18px;
+            font-weight: bolder;
+            font-family:sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+        #end{
+            margin-right: 800px;
+            width: 85%;
+        
+        }
+        #check{
+
+            width: 98%;
+            height: 180px;
+            margin:50px auto auto auto;
+            display: flex;
+            font-size: larger;
+            align-items: center;
+            font-family: sans-serif;
+        }
+
+       
+ </style>
+</head>
+<body>
+    <div id="higher">Have a coupon? Click here to enter your code</div>
+    <hr>
+    <div id="bos">
+<!--********************************************************************************************************************************************  -->
+    <div id="left">
+            <h1>Billing Details</h1>
+            <div class="di">
+                  <div>
+                         <h2>FIRST NAME *</h2>
+                         <input type="text" id="nam1">
+                  </div>
+                  <div>
+                         <h2>LAST NAME *</h2>
+                         <input type="text" id="nam2">
+                  </div>
+            </div>      
+            
+            <h2 >COUNTRY / REGION *</h2>
+            <select name="" id="sel1">
+                <option value="India">India</option>
+                <option value="England">England</option>
+                <option value="USA">USA</option>
+                <option value="Australia">Australia</option>
+                <option value="China">China</option>
+            </select>
+            <h2>ADDRESS *</h2>
+            <input type="text" id="ad" placeholder="House number and street name">
+            <div class="di">
+                <div>
+                       <h2>TOWN / CITY *</h2>
+                       <input type="text" id="ad1">
+                </div>
+                <div>
+                    <h2>STATE / COUNTY *</h2>
+                    <select name="" id="sel2">
+                        <option value="Uttar">Uttar Pradesh</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Tamil">Tamil Nadu</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                    </select>
+                </div>
+            </div> 
+            <div class="di">
+                <div>
+                       <h2>POSTCODE / ZIP *</h2>
+                       <input type="text" id="ad2">
+                </div>
+                <div>
+                        <h2>PHONE *</h2>
+                        <input type="text" id="phon">
+                </div>
+            </div>  
+            <div class="di" >
+                <div>
+                        <h2>ALTERNATE PHONE (OPTIONAL)</h2>
+                         <input type="text">
+                </div>
+                <div>
+                  <h2>EMAIL ADDRESS *</h2>
+                  <input type="text">
+                </div>
+            </div>  
+           
+            
+            
+           
+            
+            
+           
+           
+    </div>
+<!-- *************************************************************************************************************************************  --> 
+        <div id="right">
+              <div class="divi">
+                  <h2>PRODUCT</h2>
+                  <h2>SUBTOTAL</h2>
+              </div>
+              <hr id="hrr"> 
+              <div class="divi">
+                <h2 id="pr">ADDA MEN'S CHAPPLE / SLIPPERS IN BLUE COLOUR - 6  × 1</h2>
+                <h2 id="pric">₹675.00</h2>
+             </div> 
+             <hr> 
+             <div class="divi">
+                <h2>SUBTOTAL</h2>
+                <h2 id="subtota">₹675.00</h2>
+             </div>   
+             <hr> 
+             <div class="divi">
+                <h2>DISCOUNT</h2>
+                <h2 id="discoun">-100.00</h2>
+             </div>   
+             <hr> 
+             <div class="divi">
+                <h2>TOTAL</h2>
+                <h2 id="tota">₹575.00</h2>
+             </div> 
+             <hr>  
+             <div id="buts">Returning customer? Click here to login</div>  
+             <div id="nouse">
+                <ul>
+                    <li> Guaranteed delivery with 100% original products</li>
+                    <li>COD available on some categories</li>
+                    <li>FOR ONLINE PAYMENT EXTRA ₹100 DISCOUNT ON ORDERS ABOVE ₹500</li>
+                    <li>EMI OPTION AVAILABLE</li>
+                    <li>TO AVAIL MORE BANK OPTIONS ON EMI PURCHASE ABOVE RS. 3000</li>
+                    <li>FREE DELIVERY ON ORDERS AVOVE 500 FOR COD & FOR ONLINE PAYMENT FREE DELIVERY AVAILABLE ON ALL ORDERS</li>
+                    <li>BELOW ₹500 CASH ON DELIVERY CHARGES ₹49</li>
+                </ul>
+             </div>
+             <div id="faltu">You will receive products in next 5 to 7 days all over India. Your tracking id will be share on your registered email id</div>
+             <div id="blac">Unavailable by restricted product category</div>
+             <div id="check">
+                <input type="checkbox">Cash On Dilivery</input>
+                <input type="checkbox">PAYTM</input>
+                <input type="checkbox">Card Payment</input>
+            </div>
+             <div id="inf">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</div>
+             <button id="bts">PLACE ORDER</button>
+            
+        </div>
+       
+   <!--****************************************************************************end img********************************************************  -->
+    
+</body>
+</html>
+
+<script>
+    let Billin= JSON.parse(localStorage.getItem("bill"));
+    console.log(Billin.prodno)
+    
+    document.getElementById("pr").textContent= `Price Of ${Billin.prodno} Items In Cart `
+    document.getElementById("pric").textContent= "₹"+ Billin.subt
+    document.getElementById("subtota").textContent= "₹"+ Billin.subt
+    document.getElementById("discoun").textContent= "-₹"+ Billin.dis
+    document.getElementById("tota").textContent= "₹"+ Billin.tot
+    // document.getElementById("").textContent=
+
+
+    document.getElementById("bts").addEventListener("click",function(){
+        let namee= document.getElementById("nam1").value+" "+document.getElementById("nam2").value
+        console.log(Billin.prodno)
+        let add=document.getElementById("ad1").value+", "+document.getElementById("sel2").value+", "+document.getElementById("ad2").value+", "+document.getElementById("sel1").value
+        let phn=document.getElementById("phon").value
+        let bildata = {
+            prodno: Billin.prodno,
+            subt: Billin.subt,
+            dis: Billin.dis,
+            tot: Billin.tot,
+            addres:add,
+            phone:phn,
+            name:namee
+        };
+        localStorage.removeItem("bill");
+        localStorage.setItem("bill",JSON.stringify(bildata))
+    location.href="./Payment.html"
+   
+})
+</script>

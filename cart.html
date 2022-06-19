@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart page</title>
+    <style>
+      * {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      #head {
+        border: 1px solid;
+        width: 60%;
+        text-align: center;
+        margin-left: 20%;
+        padding: 1%;
+        background: linear-gradient(#e66465, #9198e5);
+        margin-bottom: 3%;
+      }
+
+      .images {
+        width: 100px;
+        height: 80px;
+      }
+      input {
+        width: 16px;
+        height: 20px;
+        row-gap: 12%;
+      }
+      table {
+        width: 60%;
+        margin-left: 5%;
+      }
+      #cart {
+        background-color: aliceblue;
+        width: 25%;
+        height: 300px;
+        padding: 4%;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5%;
+      }
+      #body {
+        display: flex;
+      }
+      button {
+        background-color: gold;
+        border: 0px;
+        border-radius: 10px;
+        padding: 12px;
+      }
+      #update {
+        display: flex;
+        background-color: gold;
+        border: 0px;
+        border-radius: 10px;
+        padding: 12px;
+        justify-items: right;
+        margin-left: 85%;
+      }
+
+      #total {
+        width: 60%;
+      }
+      .button {
+        background-color: white;
+        width: 10px;
+        height: 10px;
+        margin-top: 20px;
+        text-align: center;
+        justify-content: center;
+      }
+      #couponcode {
+        display: block;
+        width: 40%;
+        height: 10%;
+      }
+      .total {
+        display: flex;
+        justify-content: space-between;
+      }
+      td {
+        text-align: center;
+      }
+      #total {
+        display: flex;
+        justify-content: end;
+      }
+      th{
+        box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+      }
+      tbody>tr>td{
+        box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+      }
+    </style>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+  </head>
+  <body>
+    <div id="promote">
+      FOR ONLINE PAYMENT EXTRA ₹100 DISCOUNT ON ORDERS ABOVE ₹500
+    </div>
+    <div id="navbar">
+      <div id="boxes">
+        <div>
+         <h1 style="color: rgb(8, 70, 81); text-align: left;">Cart</h1>
+        </div>
+        <div>
+          <img
+            src="https://www.uboric.com/wp-content/uploads/2021/04/uboric.svg"
+            alt=""
+            style="width: 190px"
+          />
+        </div>
+        <div id="logo">
+          <div>
+            <div id="profiles"><img src="profile.png" alt="" /></div>
+            <div id="carts"><img src="cart.png" alt="" /></div>
+          </div>
+        </div>
+      </div>
+      <div id="toggle">
+        <div id="hom">Home</div>
+
+        <select name="" id="catlog" onmouseover="menu()">
+          <option value="category">category</option>
+          <option value="mens.html">Men's Fashion</option>
+          <option value="womens.html">Women's Fashion</option>
+          <option value="kitchen.html">Kitchen Ware</option>
+          <option value="health.html">Health & care</option>
+          <option value="foot.html">Foot Wear</option>
+          <option value="accessories">Accessories</option>
+        </select>
+
+        <div id="">Customer/Guest login</div>
+        <div id="">Merchant/Bulk Order</div>
+        <div id="">Become A Seller</div>
+      </div>
+    </div>
+
+
+
+
+    <div id="head">Amazing offers on checkout</div>
+    <div id="body">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th>product</th>
+            <th>price</th>
+            <th>quantity</th>
+            <th>subtotal</th>
+          </tr>
+        </thead>
+        <hr />
+        <tbody>
+          <!-- appending the cart products hear -->
+        </tbody>
+      </table>
+      <div id="cart">
+        <h1>Cart Totals</h1>
+        <div class="total">
+          <h3>Subtotal</h3>
+          <p id="cart_total"></p>
+        </div>
+        <div class="total">
+          <h3 id="discount"></h3>
+          <p id="dv"></p>
+        </div>
+        <hr />
+        <div class="total">
+          <h3>Total</h3>
+          <p id="total"></p>
+        </div>
+        <hr />
+        <a href="checkout.html"><button>Proceed to checkout</button></a>
+      </div>
+    </div>
+    <div id="total">
+      <hr />
+      <button id="update">Update Cart</button>
+      <hr />
+    </div>
+    <div id="coupon">
+      <input
+        type="text"
+        id="couponcode"
+        placeholder="ENTER YOUR PROMOCODE"
+        style="margin-bottom: 20px; height: 50px; font-size: "
+      />
+      <button id="applycouppon">Apply coupon</button>
+      <p id="coup"></p>
+    </div>
+    <section class="footer">
+      <div class="social">
+        <a href="https://www.instagram.com/accounts/login/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.facebook.com/login/" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://twitter.com/i/flow/login" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a
+          href="https://accounts.snapchat.com/accounts/login?client_id=geo"
+          target="_blank"
+          ><i class="fab fa-snapchat"></i
+        ></a>
+      </div>
+
+      <ul class="list">
+        <li>
+          <a href="./About.html">About Us</a>
+        </li>
+        <li>
+          <a href="./">Contact Us</a>
+        </li>
+        <li>
+          <a href="./Shipping.html">Shipping & Returns</a>
+        </li>
+        <li>
+          <a href="./">My Account</a>
+        </li>
+        <li>
+          <a href="./Privacy.html">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="./Terms.html">Terms & Condition</a>
+        </li>
+      </ul>
+
+      <p class="COPYRIGHT">2019-2021 UBORIC.ALL RIGHTS RESERVED.</p>
+
+      <div class="wrapper">
+        <div class="toggle_button">
+          <ul>
+            <li>
+              <a class="share_btn">
+                <span class="text">SHARE</span>
+                <span class="icon"><i class="fas fa-plus"></i></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/"
+                class="sm facebook"
+                target="_blank"
+              >
+                <span class="icon">
+                  <i class="fab fa-facebook-f"></i>
+                </span>
+                <span class="text">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/" class="sm twitter" target="_blank">
+                <span class="icon">
+                  <i class="fab fa-twitter"></i>
+                </span>
+                <span class="text">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/accounts/login/"
+                class="sm instagram"
+                target="_blank"
+              >
+                <span class="icon">
+                  <i class="fab fa-instagram"></i>
+                </span>
+                <span class="text">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://web.whatsapp.com/"
+                class="sm whatsapp"
+                target="_blank"
+              >
+                <span class="icon">
+                  <i class="fab fa-whatsapp"></i>
+                </span>
+                <span class="text">Whatsapp</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+  </body>
+</html>
+<script>
+  let x = JSON.parse(localStorage.getItem("cartdata")) || [];
+  console.log(x);
+  var sum = 0;
+  var quantity = 1;
+  for (i = 0; i < x.length; i++) {
+    let tr = document.createElement("tr");
+    tr.setAttribute=("id","row"+i)
+    let td1 = document.createElement("td");
+    td1.innerText = "❌";
+    td1.addEventListener("click", deleterow);
+    function deleterow(i) {
+      console.log(event.target.parentNode)
+      x.splice(i,1)
+    localStorage.removeItem("cartdata");
+    localStorage.setItem("cartdata",JSON.stringify(x));
+    location.reload();
+
+    }
+    let td2 = document.createElement("td");
+    let img = document.createElement("img");
+    img.setAttribute("class", "images");
+    img.src = x[i].url;
+    td2.append(img);
+    let td3 = document.createElement("td");
+    td3.innerText = x[i].name;
+    let td4 = document.createElement("td");
+    td4.innerText = "₹" + x[i].price;
+    let td5 = document.createElement("td");
+    var input = document.createElement("input");
+    input.style = "width:50px";
+    input.type = "number";
+    input.value = "1";
+    // input.setAttribute("min",1)
+    var div = document.createElement("div");
+    var td6 = document.createElement("td");
+    let price = x[i].price;
+    sum += Number(price);
+    document.getElementById("cart_total").innerText = sum;
+    document.getElementById("total").innerText = sum;
+    
+    td6.innerText = price;
+    td5.append(input);
+    tr.append(td1, td2, td3, td4, td5, td6);
+    document.querySelector("tbody").append(tr);
+    let hr=document.createElement("hr")
+    document.querySelector("tbody").append(hr);
+
+  }
+  let bildata = {
+        prodno: x.length,
+        subt: sum,
+        dis: 0,
+        tot: sum,
+      };
+      localStorage.setItem("bill", JSON.stringify(bildata));
+  
+    
+  let u = document.getElementById("applycouppon");
+  u.addEventListener("click", applycoupon);
+  function applycoupon() {
+    let coupon = document.getElementById("couponcode").value;
+    if (coupon == "masai20") {
+      let total = document.getElementById("cart_total").innerText;
+      let discount = (Number(total) / 100) * 20;
+      let new_value = total - discount;
+      document.getElementById("discount").innerText = "Discount";
+      document.getElementById("dv").innerText = discount.toFixed(2);
+      document.getElementById("total").innerText = new_value;
+      document.getElementById("coup").innerText =
+        "coupon added successfully!!!";
+      document.getElementById("coup").style.color = "green";
+
+      let bildata = {
+        prodno: x.length,
+        subt: total,
+        dis: discount.toFixed(2),
+        tot: new_value,
+      };
+     
+
+      localStorage.setItem("bill", JSON.stringify(bildata));
+
+      let pricedetails = {
+        csubtotal: total,
+        cdiscount: discount,
+        ctotal: new_value,
+      };
+      localStorage.setItem("price", JSON.stringify(pricedetails));
+    } else {
+      document.getElementById("coup").innerText =
+        "*******Invalid Coupon*******";
+      document.getElementById("coup").style.color = "red";
+    }
+  }
+</script>
+
+<script>
+  document.getElementById("bulk").addEventListener("click", function () {
+    location.href = "./login3.html";
+  });
+</script>
