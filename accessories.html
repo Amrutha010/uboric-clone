@@ -280,8 +280,8 @@
           <option value="accessories.html">Accessories</option>
         </select>
 
-        <div id="">Customer/Guest login</div>
-        <div id="">Merchant/Bulk Order</div>
+        <div id="Account">Customer/Guest login</div>
+        <div id="bulk">Merchant/Bulk Order</div>
         <div id="">Become A Seller</div>
       </div>
     </div>
@@ -301,9 +301,9 @@
         <label for=""><h2 id="lb2">Product Categories</h2></label>
         <select name="" id="select">
           <option value="All">All</option>
-          <option value="Top Wear" id="two">Top Wear</option>
-          <option value="Bottom Wear" id="three">Bottom Wear</option>
-          <option value="Foot Wear" id="three">Foot Wear</option>
+          <option value="Bag" id="two">Bag</option>
+          <!-- <option value="Bottom Wear" id="three">Bottom Wear</option>
+          <option value="Foot Wear" id="three">Foot Wear</option> -->
         </select>
         <hr />
         <button id="clear">Clear</button>
@@ -524,5 +524,12 @@
   });
   document.getElementById("carts").addEventListener("click",function(){
     location.href="./cart.html"
+  })
+</script>
+<script src="searching.j"></script>
+<script src="linking.js"></script>
+<script>
+  document.getElementById("bulk").addEventListener("click",function(){
+    location.href="./login3.html"
   })
 </script>

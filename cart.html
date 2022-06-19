@@ -4,157 +4,99 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
+    <title>cart page</title>
     <style>
       * {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
       }
-      #promote {
+      #head {
+        border: 1px solid;
+        width: 60%;
         text-align: center;
-        height: 30px;
-        background-color: rgb(5, 139, 196);
-        display: flex;
+        margin-left: 20%;
+        padding: 1%;
+        background: linear-gradient(#e66465, #9198e5);
+        margin-bottom: 3%;
+      }
+
+      .images {
+        width: 100px;
+        height: 80px;
+      }
+      input {
+        width: 16px;
+        height: 20px;
+        row-gap: 12%;
+      }
+      table {
+        width: 60%;
+        margin-left: 5%;
+      }
+      #cart {
+        background-color: aliceblue;
+        width: 25%;
+        height: 300px;
+        padding: 4%;
         justify-content: center;
         align-items: center;
-        color: aliceblue;
+        margin-left: 5%;
       }
-      #boxes {
+      #body {
         display: flex;
-        height: 100px;
       }
-      #boxes > div {
-        width: 33%;
+      button {
+        background-color: gold;
+        border: 0px;
+        border-radius: 10px;
+        padding: 12px;
+      }
+      #update {
+        display: flex;
+        background-color: gold;
+        border: 0px;
+        border-radius: 10px;
+        padding: 12px;
+        justify-items: right;
+        margin-left: 85%;
+      }
 
-        display: flex;
+      #total {
+        width: 60%;
+      }
+      .button {
+        background-color: white;
+        width: 10px;
+        height: 10px;
+        margin-top: 20px;
+        text-align: center;
         justify-content: center;
-        align-items: center;
       }
-      #search {
-        width: 70%;
-        height: 40px;
-
-        font-size: larger;
-        padding-left: 10px;
-
-        border-radius: 20px 0px 0px 20px;
+      #couponcode {
+        display: block;
+        width: 40%;
+        height: 10%;
       }
-      #searchbtn {
-        width: 80px;
-        height: 44px;
-        /* border: 1px solid ; */
-        background-color: black;
-        color: white;
-        border-radius: 0px 20px 20px 0px;
-        font-size: 18px;
+      .total {
+        display: flex;
+        justify-content: space-between;
       }
-
-      #logo > div {
-        width: 100%;
+      td {
+        text-align: center;
+      }
+      #total {
         display: flex;
         justify-content: end;
-        padding-right: 40px;
       }
-      #logo > div > div > img {
-        width: 50px;
-        margin-left: 10px;
+      th{
+        box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
       }
-      #toggle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      tbody>tr>td{
+        box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
       }
-      #toggle > div {
-        margin-left: 5px;
-        padding: 10px 10px 10px 10px;
-        font-size: larger;
-      }
-      #toggle > div:hover {
-        background-color: black;
-        color: white;
-      }
-      #catlog:hover {
-        background-color: black;
-        color: white;
-      }
-      #catlog {
-        border: 0px;
-        font-size: large;
-        height: 40px;
-        text-align: center;
-        margin-top: 15px;
-        background-color: transparent;
-        /* white-space: 20px; */
-      }
-      .bttt:hover {
-        filter: opacity(0.5);
-      }
-
-      #head1 {
-        font-size: 50px;
-
-        padding-bottom: 30px;
-      }
-      #searchbtn:hover {
-        filter: opacity(0.5);
-      }
-      #profiles:hover,
-      #carts:hover {
-        filter: opacity(0.5);
-      }
-      #first > img {
-        margin-top: 150px;
-      }
-      #butt {
-        height: 50px;
-        width: 50%;
-        display: block;
-        margin: auto;
-        margin-top: 50px;
-      }
-      #cartpage {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-        margin-top: 50px;
-        margin-bottom: 200px;
-      }
-      #tabs {
-        width: 50%;
-        height: 80%;
-    
-      }
-      #total1 {
-        width: 20%;
-      
-        height: 80%;
-      }
-      td,th{
-        padding: 5px 10px 5px 10px;
-      }
-      table img{
-        width: 50px;
-      }
-     table p{
-        width: 400px;
-     }
-    table tr:nth-child(even){
-      background-color: grey;
-     }
-
     </style>
-    <link rel="stylesheet" href="footer.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
   </head>
   <body>
     <div id="promote">
@@ -198,25 +140,61 @@
       </div>
     </div>
 
-    <button id="butt">,cnv,,mn,c, , ,</button>
-    <div id="cartpage">
-      <div id="tabs">
-          <table>
 
-              <thead>
-                  <th></th>
-                  <th>Products</th>
-                  <th>Price</th>
-                  <th>Quantity</th>
-                  <th>Subtotal</th>
-                  <th></th>
-                </thead>
-                <tbody></tbody>
-            </table>
+
+
+    <div id="head">Amazing offers on checkout</div>
+    <div id="body">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th>product</th>
+            <th>price</th>
+            <th>quantity</th>
+            <th>subtotal</th>
+          </tr>
+        </thead>
+        <hr />
+        <tbody>
+          <!-- appending the cart products hear -->
+        </tbody>
+      </table>
+      <div id="cart">
+        <h1>Cart Totals</h1>
+        <div class="total">
+          <h3>Subtotal</h3>
+          <p id="cart_total"></p>
+        </div>
+        <div class="total">
+          <h3 id="discount"></h3>
+          <p id="dv"></p>
+        </div>
+        <hr />
+        <div class="total">
+          <h3>Total</h3>
+          <p id="total"></p>
+        </div>
+        <hr />
+        <a href="checkout.html"><button>Proceed to checkout</button></a>
       </div>
-      <div id="total1"></div>
     </div>
-
+    <div id="total">
+      <hr />
+      <button id="update">Update Cart</button>
+      <hr />
+    </div>
+    <div id="coupon">
+      <input
+        type="text"
+        id="couponcode"
+        placeholder="ENTER YOUR PROMOCODE"
+        style="margin-bottom: 20px; height: 50px; font-size: "
+      />
+      <button id="applycouppon">Apply coupon</button>
+      <p id="coup"></p>
+    </div>
     <section class="footer">
       <div class="social">
         <a href="https://www.instagram.com/accounts/login/" target="_blank"
@@ -316,50 +294,107 @@
       </div>
     </section>
   </body>
+  </body>
 </html>
-
 <script>
-  let cdata = JSON.parse(localStorage.getItem("cartdata")) || [];
+  let x = JSON.parse(localStorage.getItem("cartdata")) || [];
+  console.log(x);
+  var sum = 0;
+  var quantity = 1;
+  for (i = 0; i < x.length; i++) {
+    let tr = document.createElement("tr");
+    tr.setAttribute=("id","row"+i)
+    let td1 = document.createElement("td");
+    td1.innerText = "❌";
+    td1.addEventListener("click", deleterow);
+    function deleterow(i) {
+      console.log(event.target.parentNode)
+      x.splice(i,1)
+    localStorage.removeItem("cartdata");
+    localStorage.setItem("cartdata",JSON.stringify(x));
+    location.reload();
+
+    }
+    let td2 = document.createElement("td");
+    let img = document.createElement("img");
+    img.setAttribute("class", "images");
+    img.src = x[i].url;
+    td2.append(img);
+    let td3 = document.createElement("td");
+    td3.innerText = x[i].name;
+    let td4 = document.createElement("td");
+    td4.innerText = "₹" + x[i].price;
+    let td5 = document.createElement("td");
+    var input = document.createElement("input");
+    input.style = "width:50px";
+    input.type = "number";
+    input.value = "1";
+    // input.setAttribute("min",1)
+    var div = document.createElement("div");
+    var td6 = document.createElement("td");
+    let price = x[i].price;
+    sum += Number(price);
+    document.getElementById("cart_total").innerText = sum;
+    document.getElementById("total").innerText = sum;
+    
+    td6.innerText = price;
+    td5.append(input);
+    tr.append(td1, td2, td3, td4, td5, td6);
+    document.querySelector("tbody").append(tr);
+    let hr=document.createElement("hr")
+    document.querySelector("tbody").append(hr);
+
+  }
+  let bildata = {
+        prodno: x.length,
+        subt: sum,
+        dis: 0,
+        tot: sum,
+      };
+      localStorage.setItem("bill", JSON.stringify(bildata));
   
+    
+  let u = document.getElementById("applycouppon");
+  u.addEventListener("click", applycoupon);
+  function applycoupon() {
+    let coupon = document.getElementById("couponcode").value;
+    if (coupon == "masai20") {
+      let total = document.getElementById("cart_total").innerText;
+      let discount = (Number(total) / 100) * 20;
+      let new_value = total - discount;
+      document.getElementById("discount").innerText = "Discount";
+      document.getElementById("dv").innerText = discount.toFixed(2);
+      document.getElementById("total").innerText = new_value;
+      document.getElementById("coup").innerText =
+        "coupon added successfully!!!";
+      document.getElementById("coup").style.color = "green";
 
-  for (let i = 0; i < cdata.length; i++) {
-    let row = document.createElement("tr");
-
-    let col1= document.createElement("td")
+      let bildata = {
+        prodno: x.length,
+        subt: total,
+        dis: discount.toFixed(2),
+        tot: new_value,
+      };
      
 
-    let img=document.createElement("img")
-    img.src= cdata[i].url;
-    col1.append(img);
+      localStorage.setItem("bill", JSON.stringify(bildata));
 
-    let col2= document.createElement("td")
-    
-    
-    let pt=document.createElement("p");
-    pt.textContent= cdata[i].name;
-    col2.append(pt)
-
-    let col3= document.createElement("td")
-    col3.textContent= cdata[i].price
-    
-
-
-    let col4= document.createElement("td")
-    
-
-    let qnt =document.createElement("input");
-    let d="quan"+i;
-    qnt.setAttribute("id", d);
-
-    let col5= document.createElement("td")
-    
-
-    let col6= document.createElement("td")
-
-    row.append(col1,col2,col3,col4,col5,col6)
-    document.querySelector("tbody").append(row)
-
+      let pricedetails = {
+        csubtotal: total,
+        cdiscount: discount,
+        ctotal: new_value,
+      };
+      localStorage.setItem("price", JSON.stringify(pricedetails));
+    } else {
+      document.getElementById("coup").innerText =
+        "*******Invalid Coupon*******";
+      document.getElementById("coup").style.color = "red";
+    }
   }
 </script>
 
-<script src="linking.js"></script>
+<script>
+  document.getElementById("bulk").addEventListener("click", function () {
+    location.href = "./login3.html";
+  });
+</script>

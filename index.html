@@ -34,11 +34,50 @@
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="Home.css" />
+  <style>
+     #container{
+      width: 100%;
+     
+      min-height: 50vh;
+     }
+     .contain{
+      padding-left: 50px;
+      padding-right: 50px;
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      gap: 40px;
+     }
+     .contain>div{
+      background-color: white;
+        height: 400px;
+        align-content: center;
+        text-align: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding-left: 10px;
+
+     }
+     .contain>div:hover{
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     }
+     #carbtn{
+         margin-top: 6px;
+         
+         background-color: black;
+         color: white;
+         border: 0px;
+         border-radius: 10px;
+         padding: 10px 10px 10px 10px;
+      }
+      #carbtn:hover{
+        filter: opacity(.5);
+      }
+      .hov:hover{
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      }
+  </style>
+  <script src="data.js"></script>
   </head>
 
-  <style>
-     
-  </style>
   <body>
     <!-- Navbar Code Starts Here -->
     <div id="promote">
@@ -47,11 +86,8 @@
     <div id="navbar">
       <div id="boxes">
         <div>
-          <input type="text" id="search" placeholder="Search here..." /><button
-            id="searchbtn"
-          >
-            Search
-          </button>
+          <input type="text" id="search" placeholder="Search here..." />
+          <button id="searchbtn">      Search          </button>
         </div>
         <div>
           <img
@@ -81,7 +117,7 @@
         </select>
 
         <div id="Account">Customer/Guest login</div>
-        <div id="">Merchant/Bulk Order</div>
+        <div id="bulk">Merchant/Bulk Order</div>
         <div id="">Become A Seller</div>
       </div>
     </div>
@@ -100,6 +136,7 @@
     <!-- BreadCrumb Page Code Starts Here -->
 
     <!-- Home Page Code Starts Here -->
+    <div id="container">
     <div id="Home_stuff">
       <div id="kitchen">
         <img
@@ -110,20 +147,24 @@
       <h1>🍴KITCHEN WARE🍴</h1>
       <div id="kitchencat">
         <img
+         class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/12/kithchen-tools.jpg"
           alt=""
         />
         <img
+         class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/12/Air-Tight-Containers.jpg"
           alt=""
         />
         <img
+         class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/12/Gas-Lighter-1024x1024.jpg"
           alt=""
         />
       </div>
       <div id="box">
         <img
+         class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/08/Uboric-1.jpg"
           alt=""
         />
@@ -133,12 +174,14 @@
         <div>
           <div>
             <img
+             class="hov"
               src="https://www.uboric.com/wp-content/uploads/2021/12/banner1-1-1.jpg"
               alt="1"
             />
           </div>
           <div>
             <img
+             class="hov"
               src="https://www.uboric.com/wp-content/uploads/2021/12/banner2-1.jpg"
               alt="2"
             />
@@ -146,6 +189,7 @@
         </div>
         <div>
           <img
+           class="hov"
             src="https://www.uboric.com/wp-content/uploads/2021/02/Headphone.jpg"
             alt="3"
           />
@@ -153,12 +197,14 @@
         <div>
           <div>
             <img
+             class="hov"
               src="https://www.uboric.com/wp-content/uploads/2021/12/banner3-1.jpg"
               alt="4"
             />
           </div>
           <div>
             <img
+             class="hov"
               src="https://www.uboric.com/wp-content/uploads/2021/12/banner4-1.jpg"
               alt="5"
             />
@@ -167,22 +213,27 @@
       </div>
       <div id="others">
         <img
+         class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/12/Socks.jpg"
           alt=""
         />
         <img
+         class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/12/Personal-Care.jpg"
           alt=""
         />
         <img
+         class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/12/Braclate.jpg"
           alt=""
         />
         <img
+         class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/12/Grocery.jpg"
           alt=""
         />
         <img
+         class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/12/Health-Care.jpg"
           alt=""
         />
@@ -190,54 +241,67 @@
       <h1>🍜 spices 🍜</h1>
       <div id="spices">
         <img
+        class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/12/Spices-1.jpg"
           alt=""
         />
         <img
+        class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/12/Spices-2.jpg"
           alt=""
         />
         <img
+        class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/12/Spices-3.jpg"
           alt=""
         />
         <img
+        class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/12/Spices-5.jpg"
           alt=""
         />
         <img
+        class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/12/Spices-4.jpg"
           alt=""
         />
       </div>
       <h1>👟 FOOT WEAR👟</h1>
       <img
+      class="hov"
         src="https://www.uboric.com/wp-content/uploads/elementor/thumbs/men-fashion-pf2rgkwglk7z47uh031vpxcshl64adc389ivxapmss.jpg"
         alt=""
         id="foot"
       />
       <div id="shoes">
         <img
+        class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/12/Foot-Wear-1.jpg"
           alt=""
         />
         <img
+        class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/12/Foot-Wear-3.jpg"
           alt=""
         />
         <img
+        class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/12/Foot-Wear-2.jpg"
           alt=""
         />
         <img
+        class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/12/Foot-Wear.jpg"
           alt=""
         />
         <img
+        class="hov"
           src="https://www.uboric.com/wp-content/uploads/2020/12/Foot-Wear-5.jpg"
           alt=""
         />
       </div>
+
+    </div>
       <div id="footer_text">
         <h1>
           The Ultimate Domestic Online Shopping Experience Platform in India
@@ -441,4 +505,74 @@
     }
   }
 </script>
-<script src="searching.js"></script>
+<script >
+ let array= JSON.parse(localStorage.getItem("cartdata")) || [];
+  // *************************************************************
+document.getElementById("searchbtn").addEventListener("click",handleSearchItems)
+function handleSearchItems(){
+    document.getElementById("container").innerHTML="";
+    document.getElementById("container").setAttribute("class", "contain")
+   let x= document.getElementById("search").value.toUpperCase()
+   console.log(x)
+   let searched = Data.filter(function(ele){
+    if( ele.name.toUpperCase().indexOf(x) !== -1||ele.category.toUpperCase().indexOf(x) !== -1||ele.type.toUpperCase().indexOf(x) !== -1){
+        return true;
+    }else{
+        return false;
+    }
+});
+   
+   printLM(searched)
+}
+// *************************************88888888
+function printLM(Data) {
+    console.log("yes")
+    for (let i = 0; i < Data.length; i++) {
+      let div = document.createElement("div");
+      let d = Data[i].id;
+      div.setAttribute("id", d);
+      let imgdiv = document.createElement("div");
+
+      let img = document.createElement("img");
+      img.src = Data[i].url;
+      let p = document.createElement("p");
+      p.textContent = Data[i].name;
+
+      let h3 = document.createElement("h3");
+      h3.textContent = "₹" + Data[i].price;
+
+      let cartbtn = document.createElement("button");
+      cartbtn.setAttribute("id","carbtn")
+      cartbtn.innerText="ADD TO CART";
+      cartbtn.addEventListener("click",function(){
+        array.push(Data[i])
+       
+       localStorage.setItem("cartdata",JSON.stringify(array))
+      })
+
+
+
+      imgdiv.addEventListener("click", function(){
+        
+   let z= Data[i].id;
+    localStorage.setItem("display", z);
+    location.href = "display.html";
+      });
+      imgdiv.append(img);
+      div.append(imgdiv, p, h3,cartbtn);
+      document.querySelector("#container").append(div);
+    }
+  }
+ 
+
+  document.getElementById("carts").addEventListener("click",function(){
+    location.href="./cart.html"
+  })
+
+
+</script>
+<script>
+  document.getElementById("bulk").addEventListener("click", function () {
+    location.href = "./login3.html";
+  });
+</script>

@@ -467,16 +467,17 @@
         <div id="Home">Home</div>
 
         <select name="" id="catlog" onmouseover="menu()">
-          <option value="mens">Men's Fashion</option>
-          <option value="womens">Women's Fashion</option>
-          <option value="kitchen">Kitchen Ware</option>
-          <option value="health">Health & care</option>
-          <option value="Foot">Foot Wear</option>
-          <option value="accessories">Accessories</option>
+          <option value="category">Categories</option>
+          <option value="mens.html">Men's Fashion</option>
+          <option value="womens.html">Women's Fashion</option>
+          <option value="kitchen.html">Kitchen Ware</option>
+          <option value="health.html">Health & care</option>
+          <option value="Foot.html">Foot Wear</option>
+          <option value="accessories.html">Accessories</option>
         </select>
 
-        <div id="">Customer/Guest login</div>
-        <div id="">Merchant/Bulk Order</div>
+        <div id="Account">Customer/Guest login</div>
+        <div id="bulk">Merchant/Bulk Order</div>
         <div id="">Become A Seller</div>
       </div>
     </div>
@@ -594,7 +595,7 @@
 </html>
 <script>
   document.querySelector("#SignUpform").addEventListener("submit", SignUp);
-  let Data = [];
+  let Data = JSON.parse(localStorage.getItem("SignupData")) || [];
   function SignUp() {
     event.preventDefault();
     let LoginName = document.querySelector("#FirstName").value;
@@ -620,6 +621,7 @@
         myobj = {
           Email: Loginemail,
           Password: Loginpassword,
+          name: LoginName +" "+ LoginSurname
         };
 
         Data.push(myobj);
@@ -631,6 +633,24 @@
 
   document.querySelector("#Home").addEventListener("click", Home);
   function Home() {
-    location.href = "Home.html";
+    location.href = "index.html";
   }
+  document.getElementById("catlog").addEventListener("click", function () {
+    let x = document.getElementById("catlog").value;
+    if (x === "category") {
+    } else if (x === "Signup.html") {
+      location.reload()
+    } else {
+      location.href = x;
+    }
+  });
+  document.getElementById("carts").addEventListener("click",function(){
+    location.href="./cart.html"
+  })
+</script>
+<script src="linking.js"></script>
+<script>
+  document.getElementById("bulk").addEventListener("click",function(){
+    location.href="./login3.html"
+  })
 </script>
